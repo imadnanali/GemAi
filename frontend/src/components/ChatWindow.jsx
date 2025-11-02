@@ -74,7 +74,7 @@ const ChatWindow = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen w-full bg-[#111111] text-gray-200">
+    <div className="flex flex-col w-full bg-[#111111] text-gray-200">
       {/* Header */}
       <Navbar />
 
@@ -125,10 +125,6 @@ const ChatWindow = () => {
 
             {/* Disclaimer Text */}
             <p className="text-xs text-gray-500 text-center mt-3 px-4">
-              {/* Mobile text */}
-              <span className="sm:hidden">
-                {localStorage.getItem("token") ? "GemAi may make mistakes" : "Sign in to save chats"}
-              </span>
               {/* Desktop text */}
               <span className="hidden sm:inline">
                 {localStorage.getItem("token")
