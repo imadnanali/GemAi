@@ -106,7 +106,7 @@ const Chat = ({ loading }) => {
             <div className="flex gap-3 max-w-[90%]">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <img
-                  src="./assets/blacklogo.png"
+                  src={logo}
                   alt="GemAi logo"
                   className="invert h-4"
                 />
