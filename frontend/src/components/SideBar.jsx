@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { MyContext } from "./MyContext.jsx";
 import { v4 as uuidv4 } from 'uuid';
 import { AuthContext } from "../context/AuthContext.jsx";
+import logo from "../assets/blacklogo.png";
 
 const SideBar = () => {
   const { allThreads, setAllThreads, currThreadId, setReply, setPrompt, setCurrThreadId, setPrevChats, setNewChat, setIsHistoryChat, getAllThreads, setDisplayedMessages } = useContext(MyContext);
@@ -109,7 +110,7 @@ const SideBar = () => {
       {/* Header / Logo */}
       <div className="py-3 flex items-center gap-36 border-b border-gray-800" onClick={createNewChat}>
         <img
-          src="./assets/blacklogo.png"
+          src={logo}
           alt="GemAi logo"
           className="invert brightness-200 h-6"
         />

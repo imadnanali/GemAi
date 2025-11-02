@@ -3,6 +3,7 @@ import { MyContext } from "./MyContext";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
+import logo from "../assets/blacklogo.png";
 
 const Chat = ({ loading }) => {
   const { prevChats, newChat, displayedMessages, setDisplayedMessages, isHistoryChat } = useContext(MyContext);
@@ -55,7 +56,7 @@ const Chat = ({ loading }) => {
           <div className="flex flex-col items-center justify-center text-center h-[366px]">
             <div className="w-16 h-16 mb-5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
               <img
-                src="./assets/blacklogo.png"
+                src={logo}
                 alt="GemAI logo"
                 className="invert h-8"
               />
