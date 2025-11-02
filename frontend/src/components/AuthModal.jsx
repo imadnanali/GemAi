@@ -14,7 +14,7 @@ const AuthModal = ({ type, onClose }) => {
     body: JSON.stringify({ name, email, password }),
   };
   try {
-    const response = await fetch("http://localhost:8000/api/auth/signup", options);
+    const response = await fetch("https://gemai-backend.onrender.com/api/auth/signup", options);
     const data = await response.json();
     
     if (response.ok) {
@@ -48,7 +48,7 @@ const AuthModal = ({ type, onClose }) => {
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email, password })
     }
-    const response = await fetch("http://localhost:8000/api/auth/login", options);
+    const response = await fetch("https://gemai-backend.onrender.com/api/auth/login", options);
     const data = await response.json();
 
     if (response.ok) {

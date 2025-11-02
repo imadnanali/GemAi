@@ -40,7 +40,7 @@ const SideBar = () => {
 
       setCurrThreadId(newThreadId);
 
-      const response = await fetch(`http://localhost:8000/api/thread/${newThreadId}`, {
+      const response = await fetch(`https://gemai-backend.onrender.com/api/thread/${newThreadId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -75,7 +75,7 @@ const SideBar = () => {
           return;
         }
 
-        const response = await fetch(`http://localhost:8000/api/thread/${threadId}`, {
+        const response = await fetch(`https://gemai-backend.onrender.com/api/thread/${threadId}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${token}`

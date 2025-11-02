@@ -7,7 +7,6 @@ import { useContext } from "react";
 const Navbar = () => {
     const { user, logout } = useContext(AuthContext);
     const [isOpen, setIsOpen] = useState(false);
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [showAuthModal, setShowAuthModal] = useState(null);
 
     const openProfile = () => {

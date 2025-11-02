@@ -29,7 +29,7 @@ const ChatWindow = () => {
   try {
     const token = localStorage.getItem("token"); // Still get token but don't require it
     
-    const response = await fetch("http://localhost:8000/api/chat", {
+    const response = await fetch("https://gemai-backend.onrender.com/api/chat", {
       method: "POST",
       headers: { 
         "Content-Type": "application/json",

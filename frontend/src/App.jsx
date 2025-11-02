@@ -24,7 +24,7 @@ function App() {
         return;
       }
 
-      const response = await fetch("http://localhost:8000/api/thread", {
+      const response = await fetch("https://gemai-backend.onrender.com/api/thread", {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
