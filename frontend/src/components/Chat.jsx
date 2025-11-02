@@ -49,11 +49,11 @@ const Chat = ({ loading }) => {
   }, [prevChats, newChat, isHistoryChat]);
 
   return (
-    <div className="flex-1 overflow-y-auto px-6 py-6 custom-scrollbar bg-[#111111] text-gray-200 pb-36">
+    <div className="flex-1 overflow-y-auto px-6 py- custom-scrollbar bg-[#111111]  text-gray-200 pb-36">
       <div className="max-w-3xl mx-auto space-y-6">
         
         {displayedMessages.length === 0 && newChat ? (
-          <div className="flex flex-col items-center justify-center text-center h-[366px]">
+          <div className="flex flex-col items-center pt-24 justify-center text-center">
             <div className="w-16 h-16 mb-5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
               <img
                 src={logo}
@@ -89,7 +89,7 @@ const Chat = ({ loading }) => {
               {chat.role === "assistant" && (
                 <div className="flex gap-3 max-w-[90%]">
                   
-                  <div className="bg-[#1a1a1a] rounded-2xl px-4 py-3 text-sm text-white leading-6">
+                  <div className="bg-[#111] rounded-2xl px-4 py-3 text-sm text-white leading-6">
                     <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
                       {chat.content}
                     </ReactMarkdown>
