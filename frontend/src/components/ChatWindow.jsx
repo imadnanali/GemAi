@@ -28,28 +28,28 @@ const ChatWindow = () => {
 
     try {
       const token = localStorage.getItem("token");
-      
+
       const response = await fetch("https://gemai-backend.onrender.com/api/chat", {
         method: "POST",
-        headers: { 
+        headers: {
           "Content-Type": "application/json",
           ...(token && { 'Authorization': `Bearer ${token}` })
         },
         body: JSON.stringify({ content: prompt, threadId: currThreadId }),
       });
-      
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      
+
       const res = await response.json();
       setReply(res.reply);
-      
+
       if (token) {
         console.log("User logged in, refreshing threads...");
         getAllThreads();
       }
-      
+
     } catch (err) {
       console.error("Error sending message:", err);
       alert("Failed to send message. Please try again.");
@@ -77,7 +77,7 @@ const ChatWindow = () => {
     <div className="flex flex-col h-screen w-full bg-[#111111] text-gray-200">
       {/* Header */}
       <Navbar />
-      
+
       {/* Chat Section */}
       <div className="flex-1 overflow-y-auto custom-scrollbar px-4 py-2">
         <Chat loading={loading} />
@@ -87,7 +87,7 @@ const ChatWindow = () => {
       <footer className="w-full bg-[#111111] border-gray-800">
         <div className="max-w-4xl mx-auto px-4 ">
           {/* Mobile: Full width input */}
-          <div className="lg:max-w-2xl mx-auto me-[138px]">
+          <div className="lg:max-w-2xl mx-auto sm:me-[138px]">
             <div className="relative flex items-center">
               <input
                 type="text"
@@ -122,17 +122,24 @@ const ChatWindow = () => {
                 )}
               </button>
             </div>
-            
+
             {/* Disclaimer Text */}
             <p className="text-xs text-gray-500 text-center mt-3 px-4">
-              {localStorage.getItem("token") 
-                ? "GemAi can make mistakes. Consider checking important information."
-                : "GemAi can make mistakes. Sign in to save your conversations."
-              }
+              {/* Mobile text */}
+              <span className="sm:hidden">
+                {localStorage.getItem("token") ? "GemAi may make mistakes" : "Sign in to save chats"}
+              </span>
+              {/* Desktop text */}
+              <span className="hidden sm:inline">
+                {localStorage.getItem("token")
+                  ? "GemAi can make mistakes. Consider checking important information."
+                  : "GemAi can make mistakes. Sign in to save your conversations."
+                }
+              </span>
             </p>
           </div>
         </div>
-        
+
         {/* Safe area for mobile browsers */}
         <div className="h-4 safe-area-bottom lg:h-0"></div>
       </footer>
