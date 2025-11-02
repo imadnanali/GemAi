@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { MyContext } from "./MyContext";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
@@ -105,7 +105,7 @@ const Chat = ({ loading }) => {
             <div className="flex gap-3 max-w-[90%]">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <img
-                  src="./src/assets/blacklogo.png"
+                  src="../src/assets/blacklogo.png"
                   alt="AI Bot logo"
                   className="invert h-4"
                 />
