@@ -55,8 +55,8 @@ const Chat = ({ loading }) => {
           <div className="flex flex-col items-center justify-center text-center h-[366px]">
             <div className="w-16 h-16 mb-5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
               <img
-                src="./src/assets/blacklogo.png"
-                alt="AI Bot logo"
+                src="./assets/blacklogo.png"
+                alt="GemAI logo"
                 className="invert h-8"
               />
             </div>
@@ -105,8 +105,8 @@ const Chat = ({ loading }) => {
             <div className="flex gap-3 max-w-[90%]">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                 <img
-                  src="../src/assets/blacklogo.png"
-                  alt="AI Bot logo"
+                  src="./assets/blacklogo.png"
+                  alt="GemAi logo"
                   className="invert h-4"
                 />
               </div>

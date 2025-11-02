@@ -27,13 +27,13 @@ const ChatWindow = () => {
   setPrevChats((prev) => [...prev, { role: "user", content: prompt }]);
 
   try {
-    const token = localStorage.getItem("token"); // Still get token but don't require it
+    const token = localStorage.getItem("token");
     
     const response = await fetch("https://gemai-backend.onrender.com/api/chat", {
       method: "POST",
       headers: { 
         "Content-Type": "application/json",
-        ...(token && { 'Authorization': `Bearer ${token}` }) // Only add auth header if token exists
+        ...(token && { 'Authorization': `Bearer ${token}` })
       },
       body: JSON.stringify({ content: prompt, threadId: currThreadId }),
     });
@@ -45,7 +45,6 @@ const ChatWindow = () => {
     const res = await response.json();
     setReply(res.reply);
     
-    // Only refresh threads if user is logged in (has token)
     if (token) {
       console.log("User logged in, refreshing threads...");
       getAllThreads();

@@ -109,8 +109,8 @@ const SideBar = () => {
       {/* Header / Logo */}
       <div className="py-3 flex items-center gap-36 border-b border-gray-800" onClick={createNewChat}>
         <img
-          src="../src/assets/blacklogo.png"
-          alt="AiBot logo"
+          src="./assets/blacklogo.png"
+          alt="GemAi logo"
           className="invert brightness-200 h-6"
         />
         <i className="fa-solid fa-pen-to-square fa-xl"></i>
