@@ -89,7 +89,7 @@ const Chat = ({ loading }) => {
               {chat.role === "assistant" && (
                 <div className="flex gap-3 max-w-[90%]">
                   
-                  <div className="bg-[#111] rounded-2xl px-4 py-3 text-sm text-white leading-6">
+                  <div className="bg-[#1a1a1a] rounded-2xl px-4 py-3 text-sm text-white leading-6">
                     <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
                       {chat.content}
                     </ReactMarkdown>

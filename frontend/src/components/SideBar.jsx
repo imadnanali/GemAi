@@ -133,7 +133,7 @@ const SideBar = () => {
       `}>
         
         {/* Header / Logo */}
-        <div className="py-3 flex items-center justify-between px-4 border-b border-gray-800">
+        <div className="py-5 flex items-center justify-between px-4 border-b border-gray-800">
           <div className="flex items-center gap-3 cursor-pointer" onClick={createNewChat}>
             <img
               src={logo}
