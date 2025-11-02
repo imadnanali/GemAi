@@ -87,7 +87,7 @@ const ChatWindow = () => {
       <footer className="w-full bg-[#111111] border-gray-800">
         <div className="max-w-4xl mx-auto px-4 ">
           {/* Mobile: Full width input */}
-          <div className="lg:max-w-2xl mx-auto">
+          <div className="lg:max-w-2xl mx-auto me-[138px]">
             <div className="relative flex items-center">
               <input
                 type="text"
@@ -95,7 +95,7 @@ const ChatWindow = () => {
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
                 onKeyDown={handleKeyDown}
-                className="w-full bg-[#111111] text-gray-200 rounded-2xl py-3 px-4 lg:py-4 lg:px-6 focus:outline-none placeholder-gray-500 text-sm lg:text-base border border-gray-700 focus:border-gray-700"
+                className="w-full bg-[#1e1e1e] text-gray-200 rounded-2xl py-3 px-4 lg:py-4 lg:px-6 focus:outline-none placeholder-gray-500 text-sm lg:text-base border border-gray-700 focus:border-gray-700"
                 disabled={loading}
               />
               <button

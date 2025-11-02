@@ -49,11 +49,11 @@ const Chat = ({ loading }) => {
   }, [prevChats, newChat, isHistoryChat]);
 
   return (
-    <div className="flex-1 overflow-y-auto px-6 py- custom-scrollbar bg-[#111111]  text-gray-200 pb-36">
+    <div className="flex-1 overflow-y-hidden px-6 custom-scrollbar j bg-[#111111]   text-gray-200 ">
       <div className="max-w-3xl mx-auto space-y-6">
         
         {displayedMessages.length === 0 && newChat ? (
-          <div className="flex flex-col items-center pt-20 justify-center text-center">
+          <div className="flex flex-col overflow-y-hiddden sm:h-100 items-center justify-center text-center">
             <div className="w-16 h-16 mb-5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
               <img
                 src={logo}
