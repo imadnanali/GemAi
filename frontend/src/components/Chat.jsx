@@ -53,7 +53,7 @@ const Chat = ({ loading }) => {
       <div className="max-w-3xl mx-auto space-y-6">
         
         {displayedMessages.length === 0 && newChat ? (
-          <div className="flex flex-col overflow-y-hiddden items-center justify-center text-center">
+          <div className="flex flex-col overflow-y-hiddden  h-96 items-center justify-center text-center">
             <div className="w-16 h-16 mb-5 bg-linear-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
               <img
                 src={logo}

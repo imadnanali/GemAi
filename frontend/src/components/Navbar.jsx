@@ -53,7 +53,7 @@ const Navbar = () => {
 
     return (
         <div className="relative" ref={dropdownRef}>
-            <header className="flex items-center justify-between px-4 sm:px-6 py-2 border-b border-gray-800 bg-[#111111]">
+            <header className="flex items-center justify-between px-4 sm:px-6 sm:py-2 py-4 border-b border-gray-800 bg-[#111111]">
                 {/* Logo/Brand */}
                 <h1 className="text-lg sm:text-xl sm:ms-0 ms-12 font-semibold tracking-wide text-white">
                     GemAi
@@ -65,7 +65,7 @@ const Navbar = () => {
                     className="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-[#1a1a1a] transition-colors duration-200"
                 >
                     {/* User Avatar - Hidden on mobile, shown on tablet+ */}
-                    <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0">
+                    <div className="w-8 h-8 bg-linear-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0">
                         {user ? (
                             user.name ? user.name.charAt(0).toUpperCase() : user.email.charAt(0).toUpperCase()
                         ) : (

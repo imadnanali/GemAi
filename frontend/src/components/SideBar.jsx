@@ -185,12 +185,12 @@ const SideBar = () => {
                     className={`w-full text-left flex items-center gap-3 p-3 rounded-lg cursor-pointer hover:bg-[#1e1e1e] transition-all duration-150 group ${currThreadId === thread.threadId && "bg-[#1e1e1e]"}`}
                     onClick={() => getPrevThread(thread.threadId)}
                   >
-                    <i className="fa-solid fa-message text-gray-400 text-sm flex-shrink-0"></i>
+                    <i className="fa-solid fa-message text-gray-400 text-sm shrink-0"></i>
                     <span className="text-sm text-gray-300 truncate flex-1 text-left">
                       {thread.title}
                     </span>
                     <i 
-                      className="fa-solid fa-trash opacity-0 group-hover:opacity-100 hover:text-red-600 transition-opacity flex-shrink-0 ml-2"
+                      className="fa-solid fa-trash opacity-0 group-hover:opacity-100 hover:text-red-600 transition-opacity shrink-0 ml-2"
                       onClick={(e) => {
                         e.stopPropagation();
                         deleteThread(thread.threadId);
@@ -211,7 +211,7 @@ const SideBar = () => {
         {/* User Section */}
         <div className="px-3 py-2 border-t border-gray-800">
           <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#1e1e1e] transition-all duration-150 cursor-pointer">
-            <div className="w-10 h-10 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-sm font-bold text-white flex-shrink-0">
+            <div className="w-10 h-10 bg-linear-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-sm font-bold text-white shrink-0">
               {user ? (
                 user.name ? user.name.charAt(0).toUpperCase() : user.email.charAt(0).toUpperCase()
               ) : (
@@ -227,7 +227,7 @@ const SideBar = () => {
               </p>
             </div>
             <svg
-              className="w-4 h-4 text-gray-400 flex-shrink-0"
+              className="w-4 h-4 text-gray-400 shrink-0"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

@@ -87,7 +87,7 @@ const AuthModal = ({ type, onClose }) => {
           </button>
 
           <h2 className="text-2xl font-semibold mb-6 text-center">
-            {type === "login" ? "Login to AiBot" : "Create your AiBot Account"}
+            {type === "login" ? "Login to GemAi" : "Create your GemAi Account"}
           </h2>
 
           {type === "login" ? (
