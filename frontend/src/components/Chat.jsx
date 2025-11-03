@@ -49,12 +49,12 @@ const Chat = ({ loading }) => {
   }, [prevChats, newChat, isHistoryChat]);
 
   return (
-    <div className="flex-1 overflow-y-hidden px-6 custom-scrollbar bg-[#111111]   text-gray-200 ">
+    <div className="flex-1 overflow-y-hidden px-6 custom-scrollbar bg-[#111111]  text-gray-200 ">
       <div className="max-w-3xl mx-auto space-y-6">
         
         {displayedMessages.length === 0 && newChat ? (
-          <div className="flex flex-col overflow-y-hiddden h-[70vh] sm:h-100 items-center justify-center text-center">
-            <div className="w-16 h-16 mb-5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
+          <div className="flex flex-col overflow-y-hiddden items-center justify-center text-center">
+            <div className="w-16 h-16 mb-5 bg-linear-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
               <img
                 src={logo}
                 alt="GemAI logo"
@@ -104,7 +104,7 @@ const Chat = ({ loading }) => {
         {loading && (
           <div className="flex justify-start items-center space-x-2 ml-1">
             <div className="flex gap-3 max-w-[90%]">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <div className="w-8 h-8 bg-leaner-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center shrink-0 mt-1">
                 <img
                   src={logo}
                   alt="GemAi logo"

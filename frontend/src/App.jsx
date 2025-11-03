@@ -30,12 +30,12 @@ function App() {
           'Content-Type': 'application/json'
         }
       });
-      
+
       if (response.ok) {
         const res = await response.json();
-        const filterData = res.map(thread => ({ 
-          threadId: thread.threadId, 
-          title: thread.title 
+        const filterData = res.map(thread => ({
+          threadId: thread.threadId,
+          title: thread.title
         }));
         setAllThreads(filterData);
         console.log("Threads fetched:", filterData.length);
@@ -62,12 +62,13 @@ function App() {
   };
 
   return (
-    <div className="custom-scrollbar flex overflow-y-auto">
+    <div className="flex h-screen">
       <MyContext.Provider value={providerValues}>
         <SideBar />
         <ChatWindow />
       </MyContext.Provider>
     </div>
+
   )
 }
 

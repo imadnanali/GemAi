@@ -53,7 +53,7 @@ const Navbar = () => {
 
     return (
         <div className="relative" ref={dropdownRef}>
-            <header className="flex items-center justify-between px-4 sm:px-6 py-[8px] border-b border-gray-800 bg-[#111111]">
+            <header className="flex items-center justify-between px-4 sm:px-6 py-2 border-b border-gray-800 bg-[#111111]">
                 {/* Logo/Brand */}
                 <h1 className="text-lg sm:text-xl sm:ms-0 ms-12 font-semibold tracking-wide text-white">
                     GemAi
