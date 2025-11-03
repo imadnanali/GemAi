@@ -117,7 +117,7 @@ const SideBar = () => {
 
       {/* Mobile Overlay */}
       {isMobileOpen && (
-        <div 
+        <div
           className="lg:hidden fixed inset-0 bg-[#111111] top-0 bg-opacity-50 z-40"
           onClick={() => setIsMobileOpen(false)}
         ></div>
@@ -131,24 +131,33 @@ const SideBar = () => {
         h-screen w-64 bg-[#111111] text-gray-200 flex flex-col border-r border-gray-800
         lg:flex
       `}>
-        
+
         {/* Header / Logo */}
         <div className="py-5 flex items-center justify-between px-4 border-b border-gray-800">
-          <div className="flex items-center gap-3 cursor-pointer" onClick={createNewChat}>
+          {/* Logo section */}
+          <div
+            className="items-center gap-3 cursor-pointer"
+            onClick={createNewChat}
+          >
             <img
               src={logo}
               alt="GemAi logo"
-              className="invert brightness-200 h-6"
+              className="invert brightness-200 h-6 hidden sm:block"
             />
+            {/* Invisible placeholder for mobile */}
+            <div className="block sm:hidden w-6 h-6"></div>
           </div>
+
+          {/* Right icons */}
           <div className="flex items-center gap-2">
-            <i 
+            <i
               className="fa-solid fa-pen-to-square text-lg cursor-pointer hover:text-gray-300 transition-colors"
               onClick={createNewChat}
               title="New Chat"
             ></i>
           </div>
         </div>
+
 
         {/* New Chat Button */}
         <div className="p-3">
@@ -181,7 +190,7 @@ const SideBar = () => {
             <ul className="space-y-1">
               {allThreads?.map((thread, index) => (
                 <li key={index}>
-                  <button 
+                  <button
                     className={`w-full text-left flex items-center gap-3 p-3 rounded-lg cursor-pointer hover:bg-[#1e1e1e] transition-all duration-150 group ${currThreadId === thread.threadId && "bg-[#1e1e1e]"}`}
                     onClick={() => getPrevThread(thread.threadId)}
                   >
@@ -189,7 +198,7 @@ const SideBar = () => {
                     <span className="text-sm text-gray-300 truncate flex-1 text-left">
                       {thread.title}
                     </span>
-                    <i 
+                    <i
                       className="fa-solid fa-trash opacity-0 group-hover:opacity-100 hover:text-red-600 transition-opacity shrink-0 ml-2"
                       onClick={(e) => {
                         e.stopPropagation();
