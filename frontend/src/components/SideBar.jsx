@@ -218,7 +218,7 @@ const SideBar = () => {
         </div>
 
         {/* User Section */}
-        <div className="px-3 py-2 border-t border-gray-800">
+        <div className="px-3 sm:py-2 py-5 border-t border-gray-800">
           <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#1e1e1e] transition-all duration-150 cursor-pointer">
             <div className="w-10 h-10 bg-linear-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center text-sm font-bold text-white shrink-0">
               {user ? (
